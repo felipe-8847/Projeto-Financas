@@ -299,9 +299,112 @@ public class FinancasMain {
 								
 							case 4:
 								System.out.println("\n======= Doação  =========");
+								int a,b,c,d,porcentagem=0,salarioDoacao;
+								String destino;
+									
+								System.out.println("Informe o seu salario:");
+								salarioDoacao = read.nextInt();
+								System.out.println("\r\nVocê deseja realizar alguma doação?");
+								System.out.println("1- Sim\n2- Não");
+								a = read.nextInt();
+								
+								if(a<=2) {
+								switch(a) {
+								    case 1: 
+								    	System.out.println("Qual a porcentagem com base no seu salário, você deseja doar?");
+								    	porcentagem = read.nextInt();
+								    	System.out.println("\r\nEu posso oferecer sugestões?");
+										System.out.println("1- Sim\n2- Não");
+										b = read.nextInt();
+										Doação ong = new Doação(salarioDoacao,porcentagem);
+										
+										if(b<=2) { 
+								    	switch (b) {
+										 case 1:
+											 System.out.println("\nMas antes de mostrar algumas das sugestões, esse mês você deseja doar para qual área: ");
+											 System.out.println("1- Assistência social;\r\n"+"2- Cultura;\r\n"+"3- Saúde;\r\n"+ "4- Meio ambiente");
+											 c =read.nextInt();	 
+											 if(c<=4) { 
+											switch (c) {
+											 case 1:
+												 System.out.println("Assistência social:");
+												 System.out.println("1- CADI Brasil;\r\n"+ "2- Banco da providência - BP;\r\n"+"3- Amigos do bem - ADB.");
+												 d = read.nextInt();
+												 if(d<=3) {
+												 System.out.println("Sua doação foi depositada");
+												 ong.imprimir();
+												 System.out.println("Vamos para a próxima etapa!!");
+												 }else {
+													 System.out.println("Escolha incorreta, tente novamente");
+												 }
+												 break;
+											 case 2:
+												 System.out.println("Cultura");
+												 System.out.println("1- GURI;\r\n"+ "2- Instituto Palmas;\r\n"+"3- Instituto da Cultura Afro no Brasil.");
+												 d = read.nextInt();
+												 if(d<=3) {
+												 System.out.println("Sua doação foi depositada");
+												 ong.imprimir();
+												 System.out.println("Vamos para a próxima etapa!!");
+												 }else {
+													 System.out.println("Escolha incorreta, tente novamente");
+												 }
+											     break;
+											 case 3:
+												 System.out.println("Saúde:");
+												 System.out.println("1- TUCCA;\r\n"+ "2- Horas de vida;\r\n"+"3- ACD.\r\n");
+												 d = read.nextInt();
+												 if(d<=3) {
+												 System.out.println("Sua doação foi depositada");
+												 ong.imprimir();
+												 System.out.println("Vamos para a próxima etapa!!");
+												 }else {
+													 System.out.println("Escolha incorreta, tente novamente");
+												 }
+												 break;
+											 case 4:
+												 System.out.println("Meio Ambiente:");
+												 System.out.println("1- SOS Mata Atlântica;\r\n"+ "2- WWF Brasil;\r\n"+"3- IPÊ.");
+												 d = read.nextInt();
+												 if(d<=3) {
+												 System.out.println("Sua doação foi depositada");
+												 ong.imprimir();
+												 System.out.println("Vamos para a próxima etapa!!");
+												 }else {
+													 System.out.println("Escolha incorreta, tente novamente");
+										         }break; 	         
+										}		 	
+											 }break;
+											 
+										 case 2: 
+											 System.out.println("\nTudo bem, desejo uma boa doação!!");
+											 System.out.println("Por Favor, informe o nome do Destinatário:");
+											 destino = read.next(); 
+											 ong.imprimir();
+											 System.out.println("Sua doação foi depositada para "+ destino);
+											 System.out.println("Vamos para a próxima etapa!!");
+											 break;
+									}
+								    	
+							    }else {
+								      System.out.println("Escolha incorreta, tente novamente");		
+							    }break;
+								 
+								    case 2:{
+								    Doação semong = new Doação(salarioDoacao, porcentagem);
+								    System.out.println("Seu saldo atual é "+ semong.getSalario()); 
+								    System.out.println("Vamos para a próxima etapa!!");
+								    break;
+							 }   
+						  }
+								}else {
+									System.out.println("Por Favor, entre com o valor 1 ou 2");
+								}
+								
 								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
 								System.out.println("Digite o numero: ");
 								segundaOpcao = read.nextInt();
+								
 								break;	
 								
 							case 5:

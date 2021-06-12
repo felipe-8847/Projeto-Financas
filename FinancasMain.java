@@ -2,6 +2,10 @@ package ProjetoFinancas;
 
 import java.util.Scanner;
 
+import Projeto.CalcEmergencia1;
+import Projeto.CalcEmergencia2;
+import Projeto.CalcEmergencia3;
+
 public class FinancasMain {
 
 	public static void main(String[] args) {
@@ -11,7 +15,8 @@ public class FinancasMain {
 		Gastos gastos = null;
 		int x;
 		double soma=0;
-		
+		int op1;
+		double salario1 = 0;
 		int opcao=-1,segundaOpcao=1;
 		
 		System.out.println("\n=================== Bem vindo ao sistema de finanças  =================");
@@ -410,12 +415,40 @@ public class FinancasMain {
 							case 5:
 								System.out.println("\n======= Bem vindo a simulação de fundo de emergência  =========");
 								System.out.println("Digite o valor de suas despesas medias: ");
-								double despesas = read.nextDouble();
-		
-								//emergencia.setDespesas(despesas);
-								
-								//emergencia.imprimirInfo();
-								
+								System.out.println("\nAqui é a onde vamos simular sua reserva de emergência, o que é isso?\n"+
+										"Caso um imprevisto aconteca, voce tem esse valor para garantir que suas contas fixas sejam pagas\n");
+										System.out.println("Como montar sua reserva. Para isso, temos 3 planos:\r\n"
+												+ "Pequeno - Para 3 meses;\r\n"
+												+ "Medio - Para 4 meses;\r\n"
+												+ "Grande - Para 6 meses;\n");
+										System.out.println("Para saber o seu saldo de emergência, digite o seu custo fixo mensal:");
+										salario1 = read.nextDouble();
+										System.out.println("Escolha uma opção:\n"+"1-Plano Grande;\n"+"2- Plano Médio;\n"+"3 - Plano Pequeno;\n");
+										
+										op1 = read.nextInt();
+										
+										
+										switch(op1) {
+										case 1:
+											
+										 CalcEmergencia1 teste1= new CalcEmergencia1(salario1); 
+												
+										teste1.imprimirInfo1();
+										break;
+										case 2:	
+											
+										CalcEmergencia2 teste2= new CalcEmergencia2(salario1); 
+										
+										teste2.imprimirInfo2();
+										break;
+										case 3:
+									    CalcEmergencia3 teste3= new CalcEmergencia3(salario1); 
+										
+										teste3.imprimirInfo3();
+										break;
+										
+										}
+							
 								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
 								System.out.println("Digite o numero: ");
 								segundaOpcao = read.nextInt();

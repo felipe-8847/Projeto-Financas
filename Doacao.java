@@ -2,22 +2,22 @@ package ProjetoFinancas;
 
 public class Doacao {
 
-	private float Salário;
+	private float salario;
 	private float Porcentagem;
 	
 	
 	public Doacao (float salario, int porcentagem) {
-		this.Salário = salario;
+		this.salario = salario;
 		this.Porcentagem = salario - (salario * porcentagem /100);		
 	}
 
 	public float getSalário() {
-		return Salário;
+		return salario;
 	}
 
 
-	public void setSalário(float salário) {
-		Salário = salário;
+	public void setSalário(float salario) {
+		salario = salario;
 	}
 
 

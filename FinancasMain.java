@@ -316,7 +316,7 @@ public class FinancasMain {
 								    	System.out.println("\r\nEu posso oferecer sugestões?");
 										System.out.println("1- Sim\n2- Não");
 										b = read.nextInt();
-										Doação ong = new Doação(salarioDoacao,porcentagem);
+										Doacao ong = new Doacao(salarioDoacao,porcentagem);
 										
 										if(b<=2) { 
 								    	switch (b) {
@@ -391,8 +391,8 @@ public class FinancasMain {
 							    }break;
 								 
 								    case 2:{
-								    Doação semong = new Doação(salarioDoacao, porcentagem);
-								    System.out.println("Seu saldo atual é "+ semong.getSalario()); 
+								    Doacao semong = new Doacao(salarioDoacao, porcentagem);
+								    System.out.println("Seu saldo atual é "+ salario); 
 								    System.out.println("Vamos para a próxima etapa!!");
 								    break;
 							 }   

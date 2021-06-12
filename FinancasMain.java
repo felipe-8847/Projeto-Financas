@@ -5,8 +5,12 @@ import java.util.Scanner;
 public class FinancasMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner read = new Scanner(System.in);
+		GastosFixos gastosFixos = new GastosFixos();
+		Gastos gastos = null;
+		int x;
+		double soma=0;
 		
 		int opcao=-1,segundaOpcao=1;
 		
@@ -24,7 +28,7 @@ public class FinancasMain {
 		double salario = read.nextDouble();
 
 		Cliente cliente = new Cliente("cliente",0,"profissao",0);
-		FundoDeEmergencia emergencia = new FundoDeEmergencia(0);
+		//FundoDeEmergencia emergencia = new FundoDeEmergencia(0);
 
 		
 		cliente.setNome(nome);
@@ -56,6 +60,125 @@ public class FinancasMain {
 						
 							case 1:
 								System.out.println("\n======= Gastos fixos =========");
+								do
+								{
+									
+									System.out.println("\n***************Qual gasto deseja inserir?***************\n\n1-Aluguel\n2-Iptu\n3-Luz\n4-Agua\n5-Alimentacao"
+											+ "\n6-Internet\n7-Academia\n8-Internet Celular\n9-Streaming\n10-Emprestimo");
+									
+									x=read.nextInt();
+									
+									if(x==1)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com Aluguel: ");
+										double aluguel = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=aluguel;
+										
+										gastosFixos.Aluguel(aluguel);	
+									}
+									else if(x==2)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com IPTU: ");
+										double iptu = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=iptu;
+										
+										gastosFixos.Iptu(iptu);	
+									}
+									else if(x==3)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com conta de luz: ");
+										double luz = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=luz;
+										
+										gastosFixos.Luz(luz);
+									}
+									else if(x==4)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com conta de agua: ");
+										double agua = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=agua;
+										
+										gastosFixos.Agua(agua);
+									}
+									else if(x==5)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com alimentacao: ");
+										double alimentacao = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=alimentacao;
+										
+										gastosFixos.Alimentacao(alimentacao);
+									}
+									else if(x==6)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com internet: ");
+										double internet = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=internet;
+										
+										gastosFixos.Internet(internet);
+									}
+									else if(x==7)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com academia: ");
+										double academia = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=academia;
+										
+										gastosFixos.Academia(academia);
+									}
+									else if(x==8)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com internet celular: ");
+										double celInter = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=celInter;
+										
+										gastosFixos.CelInter(celInter);
+									}
+									else if(x==9)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual seu gasto com streaming: ");
+										double streaming = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=streaming;
+										
+										gastosFixos.Streaming(streaming);
+									}
+									else if(x==10)
+									{
+										gastos=gastosFixos;
+										System.out.println("\nQual valor do seu emprestimo: ");
+										double emprestimo = read.nextDouble();
+										System.out.println("-----------------------------------------------------");
+										soma+=emprestimo;
+										
+										gastosFixos.Emprestimo(emprestimo);
+									}
+									else
+									{
+										System.out.println("\nInformacao invalida!");
+									}
+								}
+								while(x>0 && x<=10);
+								double resultado = salario-soma;
+								
+								System.out.println("\nSeu gasto fixo mensal ficou em: "+soma);
+								System.out.println("\nCom valor de salario informado sobrara: "+resultado);
+								
 								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
 								System.out.println("Digite o numero: ");
 								segundaOpcao = read.nextInt();
@@ -88,9 +211,9 @@ public class FinancasMain {
 								System.out.println("Digite o valor de suas despesas medias: ");
 								double despesas = read.nextDouble();
 		
-								emergencia.setDespesas(despesas);
+								//emergencia.setDespesas(despesas);
 								
-								emergencia.imprimirInfo();
+								//emergencia.imprimirInfo();
 								
 								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
 								System.out.println("Digite o numero: ");
@@ -118,8 +241,6 @@ public class FinancasMain {
 							opcao = 0;	
 					}
 				
-		}
-			
+		}		
 	}
-
 }

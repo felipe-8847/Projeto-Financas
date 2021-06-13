@@ -2,9 +2,6 @@ package ProjetoFinancas;
 
 import java.util.Scanner;
 
-import Projeto.CalcEmergencia1;
-import Projeto.CalcEmergencia2;
-import Projeto.CalcEmergencia3;
 
 public class FinancasMain {
 
@@ -21,20 +18,20 @@ public class FinancasMain {
 		int op, op2, porcent;
 		double salario = 0, limite = 0, gasto = 0;
 		
-		System.out.println("\n=================== Bem vindo ao sistema de finanças  =================");
+		System.out.println("\n=================== BEM VINDES AO SISTEMA DE FINANÇAS =================== ");
 
-		System.out.println("\nDigite os seus dados para ter acesso ao menu");
+		System.out.println("\nDigite os seus dados para ter acesso ao nosso menu: ");
 		
-		System.out.println("\nDigite seu nome: ");
+		System.out.println("\nComo podemos te chamar? ");
 		String nome = read.next();
 		System.out.println("\nDigite sua idade: ");
 		int idade = read.nextInt();
-		System.out.println("\nDigite sua profissao: ");
+		System.out.println("\nQual sua profissão: ");
 		String profissao = read.next();
-		System.out.println("\nDigite o seu salario: ");
+		System.out.println("\nDigite o seu salário: ");
 		double salario5 = read.nextDouble();
 
-		Cliente cliente = new Cliente("cliente",0,"profissao",0);
+		Cliente cliente = new Cliente("cliente",0,"profissão",0);
 		//FundoDeEmergencia emergencia = new FundoDeEmergencia(0);
 
 		
@@ -51,13 +48,14 @@ public class FinancasMain {
 		
 		while(opcao != 0) {
 			
-			System.out.println("\n=================== Bem vindo ao sistema de finanças ==================          ");
+			System.out.println("\n======================= MENU ======================= ");
 
-			System.out.println("\nEscolha a sua opção de recomendação desejada!");
+			System.out.println("\nParabéns! Escolha a sua opção desejada!");
 			
-			System.out.println("\n1 - Gastos fixos \n2 - Despesas de lazer \n3 - Investimento \n4 - Doação \n5 - Fundo de emergência \n0 - Sair");
+			System.out.println("\n(1) Gastos fixos \n(2) Despesas de lazer \n(3) Investimento \n(4) Doação \n(5) Fundo de emergência \n"
+					+ "(0) Sair");
 
-			System.out.println("Digite o numero: ");
+			System.out.println("Digite a opção: ");
 			
 			opcao = read.nextInt();
 			
@@ -66,213 +64,234 @@ public class FinancasMain {
 					  switch(opcao) {
 						
 							case 1:
-								System.out.println("\n======= Gastos fixos =========");
+								System.out.println("\n=================== GASTOS FIXOS =================== ");
 								do
 								{
 									
-									System.out.println("\n***************Qual gasto deseja inserir?***************\n\n1-Aluguel\n2-Iptu\n3-Luz\n4-Agua\n5-Alimentacao"
-											+ "\n6-Internet\n7-Academia\n8-Internet Celular\n9-Streaming\n10-Emprestimo");
+									System.out.println("\n(1) Aluguel\n(2) IPTU\n(3) Luz\n(4) Água\n(5) Alimentação"
+											+ "\n(6) Internet residencial\n(7) Academia\n(8) Internet Celular\n(9) Streaming\n(10) Financiamento"
+											+ "\n(0) Para retornar ao menu principal");
 									
 									x=read.nextInt();
 									
 									if(x==1)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com Aluguel: ");
+										System.out.println("\nQual seu gasto com aluguel? ");
 										double aluguel = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=aluguel;
 										
-										gastosFixos.Aluguel(aluguel);	
+										gastosFixos.Aluguel(aluguel);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==2)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com IPTU: ");
+										System.out.println("\nQual seu gasto com IPTU? ");
 										double iptu = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=iptu;
 										
 										gastosFixos.Iptu(iptu);	
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==3)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com conta de luz: ");
+										System.out.println("\nQual seu gasto com conta de luz? ");
 										double luz = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=luz;
 										
 										gastosFixos.Luz(luz);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==4)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com conta de agua: ");
+										System.out.println("\nQual seu gasto com conta de água? ");
 										double agua = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=agua;
 										
 										gastosFixos.Agua(agua);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==5)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com alimentacao: ");
+										System.out.println("\nQual seu gasto com alimentação? ");
 										double alimentacao = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=alimentacao;
 										
 										gastosFixos.Alimentacao(alimentacao);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==6)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com internet: ");
+										System.out.println("\nQual seu gasto com internet residencial? ");
 										double internet = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=internet;
 										
 										gastosFixos.Internet(internet);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==7)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com academia: ");
+										System.out.println("\nQual seu gasto com academia? ");
 										double academia = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=academia;
 										
 										gastosFixos.Academia(academia);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==8)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com internet celular: ");
+										System.out.println("\nQual seu gasto com internet celular? ");
 										double celInter = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=celInter;
 										
 										gastosFixos.CelInter(celInter);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==9)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual seu gasto com streaming: ");
+										System.out.println("\nQual seu gasto com streaming? ");
 										double streaming = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=streaming;
 										
 										gastosFixos.Streaming(streaming);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else if(x==10)
 									{
 										gastos=gastosFixos;
-										System.out.println("\nQual valor do seu emprestimo: ");
+										System.out.println("\nQual valor do seu financiamento? ");
 										double emprestimo = read.nextDouble();
 										System.out.println("-----------------------------------------------------");
 										soma+=emprestimo;
 										
 										gastosFixos.Emprestimo(emprestimo);
+										System.out.println("\n-----------------------------------------------------");
 									}
 									else
 									{
-										System.out.println("\nInformacao invalida!");
+										System.out.println("\nINFORMAÇÃO INVÁLIDA!");
 									}
 								}
 								while(x>0 && x<=10);
-								double resultado = salario-soma;
+								double resultado = salario5-soma;
 								
-								System.out.println("\nSeu gasto fixo mensal ficou em: "+soma);
-								System.out.println("\nCom valor de salario informado sobrara: "+resultado);
+								System.out.println("\nSeu gasto fixo mensal ficou em R$"+soma);
+								System.out.println("\nBom..., agora você tem isso para gerenciar R$"+resultado);
 								
-								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
-								System.out.println("Digite o numero: ");
+								System.out.println("\nDeseja continuar? \n(1) Sim \n(2) Não");
+								System.out.println("Digite a opção: ");
 								segundaOpcao = read.nextInt();
 			
 								break;
 								
 							case 2:
-								System.out.println("\n======= Despesas de lazer =========");
+								System.out.println("\n=================== GASTOS DE LAZER =================== ");
 								
-								System.out.println("\nEntre com o seu Salário: ");
+								System.out.println("\nEntre com o seu salário: ");
 								salario = read.nextDouble();
 								
-								System.out.println("\nRecomendamos que você use apenas 15% do seu Salário nesse envelope. " +
-										"Deseja continuar com 15%?" + "\n1- Sim \n2- Não");
+								System.out.println("\nRecomendamos que você use apenas 15% do seu salário nesse envelope. " +
+										"Deseja continuar com 15%?" + "\n(1) Sim \n(2) Não");
 								op2 = read.nextInt();
 								
 								
 								if (op2 == 1)
 								{
 									limite = (salario*15)/100;
-									System.out.println("\nO seu Limite é " + limite + " reais.");
+									System.out.println("\n-----------------------------------------------------");
+									System.out.println("\nO seu limite é R$" + limite);
+									System.out.println("\n-----------------------------------------------------");
 									
 									do
 									{
 										
-										System.out.println("\nEscolha uma Categoria e entre com o seu Gasto Diário:"
-												+ "\nCATEGORIA 1- COMIDA/ DELIVERY: "
-												+ "\nCATEGORIA 2- PASSEIOS/FESTAS: "
-												+ "\nCATEGORIA 3- ROUPAS/ACESSÓRIOS: "
-												+ "\nCATEGORIA 4- OBJETOS: "
-												+ "\nCATEGORIA 5- OUTROS: "
-												+ "\nEntre com o 0 se Deseja sair do Programa.");
+										System.out.println("\nEscolha uma categoria e entre com o seu gasto diário: "
+												+ "\n(1) Comida / Delivery "
+												+ "\n(2) Passeios / Festas"
+												+ "\n(3) Roupas / Acessórios"
+												+ "\n(4) Objetos"
+												+ "\n(5) Outros"
+												+ "\n(0) Para retornar ao menu principal");
 										op = read.nextInt();
 										
 										
 											if (op == 1)
 											{
-												System.out.println("\nCATEGORIA 1- COMIDA/ DELIVERY:" +
-												"\nEntre com o Valor Gasto: ");
+												System.out.println("\n(1) Comida / Delivery " +
+												"\nEntre com o valor gasto: ");
 												gasto = read.nextDouble();	
 										
 												limite = limite - gasto;
-										
-												System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
+												
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
 											}
 											else if (op == 2)
 											{
-												System.out.println("\nCATEGORIA 2- PASSEIOS/FESTAS: " +
-												"\nEntre com o Valor Gasto: ");
+												System.out.println("\n(2) Passeios / Festas" +
+												"\nEntre com o valor gasto: ");
 												gasto = read.nextDouble();	
 										
 												limite = limite - gasto;
-										
-												System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
+												
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
 											}
 											else if (op == 3)
 											{
 										
-												System.out.println("\nCATEGORIA 3- ROUPAS/ACESSÓRIOS: " +
-												"\nEntre com o Valor Gasto: ");
+												System.out.println("\n(3) Roupas / Acessórios" +
+												"\nEntre com o valor gasto: ");
 												gasto = read.nextDouble();
 										
 												limite = limite - gasto;
 										
-												System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
 											}	
 											else if (op == 4)
 											{	
-												System.out.println("\nCATEGORIA 4- OBJETOS: " +
-												"\nEntre com o Valor Gasto: ");
+												System.out.println("\n(4) Objetos" +
+												"\nEntre com o valor gasto: ");
 												gasto = read.nextDouble();
 										
 												limite = limite - gasto;
 										
-										
-												System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
 											}
 											else if (op == 5)
 											{
-												System.out.println("\nCATEGORIA 5- OUTROS: " +
-												"\nEntre com o Valor Gasto: ");
+												System.out.println("\n(5) Outros" +
+												"\nEntre com o valor gasto: ");
 												gasto = read.nextDouble();
 										
 												limite = limite - gasto;
 										
-										
-												System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
 											}
 											
 											else if (op == 0)
@@ -286,7 +305,7 @@ public class FinancasMain {
 												op2 = 0;
 												System.out.println("\nVOCÊ ATINGIU O SEU LIMITE!");
 												
-												System.out.println("\nOPERAÇÃO FINALIZADA! \nNos vemos no próximo mês.");	
+												System.out.println("\nOPERAÇÃO FINALIZADA!\nNos vemos no próximo mês =)");	
 											}
 									}
 									
@@ -297,132 +316,140 @@ public class FinancasMain {
 								if (op2 == 2)
 								{
 									
-									System.out.println("\nQuantos % você Deseja usar nesse Envelope? ");
+									System.out.println("\nQuantos % você deseja usar nesse envelope? ");
 									porcent = read.nextInt(); 
 									
 									limite = (salario *porcent)/100;
 									
-									System.out.println("\nO seu Limite é " + limite + " reais");
+									System.out.println("\nO seu limite é de R$" + limite);
 									
 									do 
 									{
 										
-										System.out.println("\nEscolha uma Categoria e entre com o seu Gasto Diário:"
-												+ "\nCATEGORIA 1- COMIDA/ DELIVERY: "
-												+ "\nCATEGORIA 2- PASSEIOS/FESTAS: "
-												+ "\nCATEGORIA 3- ROUPAS/ACESSÓRIOS: "
-												+ "\nCATEGORIA 4- OBJETOS: "
-												+ "\nCATEGORIA 5- OUTROS: "
-												+ "\nEntre com o 0 se Deseja sair do Programa.");
+										System.out.println("\nEscolha uma categoria e entre com o seu gasto diário: "
+												+ "\n(1) Comida / Delivery "
+												+ "\n(2) Passeios / Festas"
+												+ "\n(3) Roupas / Acessórios"
+												+ "\n(4) Objetos"
+												+ "\n(5) Outros"
+												+ "\n(0) Para retornar ao menu principal");
 										op = read.nextInt();
 										
-										if (op == 1)
-										{
-											System.out.println("\nCATEGORIA 1- COMIDA/ DELIVERY:" +
-												"\nEntre com o Valor Gasto: ");
-											gasto = read.nextDouble();	
 										
-											limite = limite - gasto;
+											if (op == 1)
+											{
+												System.out.println("\n(1) Comida / Delivery " +
+												"\nEntre com o valor gasto: ");
+												gasto = read.nextDouble();	
 										
-											System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
-										}
-										else if (op == 2)
-										{
-											System.out.println("\nCATEGORIA 2- PASSEIOS/FESTAS: " +
-												"\nEntre com o Valor Gasto: ");
-											gasto = read.nextDouble();	
+												limite = limite - gasto;
+												
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
+											}
+											else if (op == 2)
+											{
+												System.out.println("\n(2) Passeios / Festas" +
+												"\nEntre com o valor gasto: ");
+												gasto = read.nextDouble();	
 										
-											limite = limite - gasto;
+												limite = limite - gasto;
+												
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
+											}
+											else if (op == 3)
+											{
 										
-											System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
-										}
-										else if (op == 3)
-										{
+												System.out.println("\n(3) Roupas / Acessórios" +
+												"\nEntre com o valor gasto: ");
+												gasto = read.nextDouble();
 										
-											System.out.println("\nCATEGORIA 3- ROUPAS/ACESSÓRIOS: " +
-												"\nEntre com o Valor Gasto: ");
-											gasto = read.nextDouble();
+												limite = limite - gasto;
 										
-											limite = limite - gasto;
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
+											}	
+											else if (op == 4)
+											{	
+												System.out.println("\n(4) Objetos" +
+												"\nEntre com o valor gasto: ");
+												gasto = read.nextDouble();
 										
-											System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
-										}	
-										else if (op == 4)
-										{	
-											System.out.println("\nCATEGORIA 4- OBJETOS: " +
-												"\nEntre com o Valor Gasto: ");
-											gasto = read.nextDouble();
+												limite = limite - gasto;
 										
-											limite = limite - gasto;
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
+											}
+											else if (op == 5)
+											{
+												System.out.println("\n(5) Outros" +
+												"\nEntre com o valor gasto: ");
+												gasto = read.nextDouble();
 										
-											System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
-										}
-										else if (op == 5)
-										{
-											System.out.println("\nCATEGORIA 5- OUTROS: " +
-												"\nEntre com o Valor Gasto: ");
-											gasto = read.nextDouble();
+												limite = limite - gasto;
 										
-											limite = limite - gasto;
-										
-											System.out.println("\nO seu Limite passou a ser: " + limite + " reais");
-										}	
-										else if (op == 0)
-										{
-											op2 = 0;
-											System.out.println("\nPROGRAMA FINALIZADO. ");
-										}
-										
-										if (limite == 0 || limite < 0)
-										{
-											op2 = 0;
-											System.out.println("\nVOCÊ ATINGIU O SEU LIMITE!");
+												System.out.println("\n-----------------------------------------------------");
+												System.out.println("\nO seu limite passou a ser R$" + limite);
+												System.out.println("\n-----------------------------------------------------");
+											}
 											
-											System.out.println("\nOPERAÇÃO FINALIZADA! \nNos vemos no próximo mês.");	
-										}
+											else if (op == 0)
+											{
+												op2 = 0;
+												System.out.println("\nPROGRAMA FINALIZADO. ");
+											}
+											
+											if (limite == 0 || limite < 0)
+											{
+												op2 = 0;
+												System.out.println("\nVOCÊ ATINGIU O SEU LIMITE!");
+												
+												System.out.println("\nOPERAÇÃO FINALIZADA!\nNos vemos no próximo mês =)");	
+											}
+									}
+									while (op2 != 0);
+									
 								}
-								
-								while (op2 != 0);
-									
-									
-									
-								}
-								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
-								System.out.println("Digite o numero: ");
+								System.out.println("\nDeseja continuar? \n(1) Sim \n(2) Não");
+								System.out.println("Digite a opção: ");
 								segundaOpcao = read.nextInt();
 								break;
 								
 							case 3:
-								System.out.println("\n======= Investimento  =========");
+								System.out.println("\n=================== INVESTIMENTO =================== ");
 								
 								double salarioInvest, percEnvelope, rendimentoCDB, impostoCDB, rendimentoLCI, somaFII=0.0, n2, somaAcoes=0.0;
 								int n1, tempoCDB, tempoLCI;
 
 								System.out.println("\nOi, " + nome + "! Ficamos felizes em te ver novamente! =)");
-								System.out.println("\nQuanto você recebeu esse mês? (R$) ");
+								System.out.println("\nQuanto você recebeu esse mês? ");
 								salarioInvest = read.nextDouble(); //3000
 
-								System.out.println("\nQual o percentual da sua renda você destinou para investimentos? (%)");
+								System.out.println("\nQual percentual da sua renda você destinou para investimentos? ");
 								percEnvelope = read.nextInt(); //20%
 								
 								Investimentos aplicacao1 = new Investimentos(salarioInvest, percEnvelope);
 								aplicacao1.calcularValorInvestir(); // 600
 								
-								System.out.println("\nMaravilha! =D E como você distribuiu esse valor?\n\n\t(1) Apontar em renda fixa\n\t"
+								System.out.println("\nMaravilha! =D E como você distribuiu esse valor?\n\n(1) Apontar em renda fixa\n"
 										+ "(2) Apontar em renda variável");
 								n1 = read.nextInt();
 
 								while (n1 != 2 && n1 != 1) {
-									System.out.println("\nOpção inválida, tente novamente.");
+									System.out.println("\nOPÇÃO INVÁLIDA, tente novamente.");
 									System.out.println("\nEntre com um número: ");
 									n1 = read.nextInt();
 								}
 
 								do {
 									if (n1 == 1) {
-										System.out.println("\n\tApontamento em renda fixa");
-										System.out.println("========================================= ");
-										System.out.println("\n\nDigite um número dentre essas opções:" + "\n\n\t(1) CDB/LC\n\t(2) LCI/LCA ");
+										System.out.println("\n=================== APONTAMENTO RENDA FIXA ===================");
+										System.out.println("\nDigite um número dentre essas opções:" + "\n(1) CDB/LC\n(2) LCI/LCA ");
 										int op3 = read.nextInt();
 										switch (op3) {
 										case 1:
@@ -432,7 +459,7 @@ public class FinancasMain {
 											rendimentoCDB = read.nextDouble(); //13%
 											System.out.println("\nQual o imposto desse CDB?");
 											impostoCDB = read.nextDouble(); //17,5%
-											System.out.println("\nQual o tempo desse CDB?");
+											System.out.println("\nQual o tempo (vencimento) desse CDB?");
 											tempoCDB = read.nextInt(); //1
 											
 											Investimentos aplicacao2 = new Investimentos(salarioInvest, percEnvelope, rendimentoCDB,
@@ -447,7 +474,7 @@ public class FinancasMain {
 											
 											System.out.println("\nQual o rendimento desse LCI/LCA?");
 											rendimentoLCI = read.nextDouble();
-											System.out.println("\nQual o tempo desse LCI/LCA?");
+											System.out.println("\nQual o tempo (vencimento) desse LCI/LCA?");
 											tempoLCI = read.nextInt();
 											
 											Investimentos aplicacao3 = new Investimentos(salarioInvest, percEnvelope, rendimentoLCI, tempoLCI);
@@ -457,169 +484,169 @@ public class FinancasMain {
 											break;
 											
 										default:
-											System.out.println("Opção inválida.");
+											System.out.println("OPÇÃO INVÁLIDA.");
 											break;
 										}
 									
 									} else {
-										System.out.println("\n\tApontamento em renda variável");
-										System.out.println("============================================= ");
+										System.out.println("\n=================== APONTAMENTO RENDA VARIÁVEL ===================");
 										System.out.println("\nDigite um número dentre essas opções:"
-												+ "\n\n\t(1) Ações brasileiras\n\t(2) Fundos Imobiliários");
+												+ "\n(1) Ações brasileiras\n(2) Fundos Imobiliários");
 										int op3 = read.nextInt();
 										switch (op3) {
 										case 1:
 											System.out.println("Ações brasileiras");
-											System.out.println("\nQuanto vc aplicou?");
+											System.out.println("\nQuanto você aplicou?");
 											n2 = read.nextDouble();
 											somaAcoes = somaAcoes + n2;
-											System.out.println("R$ "+somaAcoes);
+											System.out.println("R$"+somaAcoes);
 											break;
 
 										case 2:
 											System.out.println("Fundos Imobiliários");
-											System.out.println("\nQuanto vc aplicou?");
+											System.out.println("\nQuanto você aplicou?");
 											n2 = read.nextDouble();
 											somaFII = somaFII + n2;
-											System.out.println("R$ "+somaFII);
+											System.out.println("R$"+somaFII);
 											break;
 
 										default:
-											System.out.println("Opção inválida.");
+											System.out.println("OPÇÃO INVÁLIDA.");
 											break;
 										}
 									}
-									System.out.println("\nQuer repetir o procedimento? Digite o número 1 para renda fixa, 2 para renda variável ou 0 para sair ");
+									System.out.println("\nQuer repetir o procedimento? Digite o número \n(1) para renda fixa \n(2) para renda variável "
+											+ "\n(0) para sair ");
 									n1 = read.nextInt();
 								} while (n1 == 2 || n1 ==1);
 								
-								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
-								System.out.println("Digite o numero: ");
+								System.out.println("\nDeseja continuar? \n(1) Sim \n(2) Não");
+								System.out.println("Digite a opção: ");
 								segundaOpcao = read.nextInt();
 								break;	
 								
 							case 4:
-								System.out.println("\n======= Doação  =========");
+								System.out.println("\n=================== DOAÇÃO ===================");
 								int a,b,c,d,porcentagem=0,salarioDoacao;
 								String destino;
 									
-								System.out.println("Informe o seu salario:");
+								System.out.println("Entre com o seu salário:");
 								salarioDoacao = read.nextInt();
-								System.out.println("\r\nVocê deseja realizar alguma doação?");
-								System.out.println("1- Sim\n2- Não");
+								System.out.println("\nVocê deseja realizar alguma doação?");
+								System.out.println("(1) Sim\n(2) Não");
 								a = read.nextInt();
 								
 								if(a<=2) {
 								switch(a) {
 								    case 1: 
-								    	System.out.println("Qual a porcentagem com base no seu salário, você deseja doar?");
+								    	System.out.println("\nQual percentual da sua renda você destinou para doação? ");
 								    	porcentagem = read.nextInt();
-								    	System.out.println("\r\nEu posso oferecer sugestões?");
-										System.out.println("1- Sim\n2- Não");
+								    	System.out.println("\nEu posso oferecer sugestões?");
+										System.out.println("(1) Sim\n(2) Não");
 										b = read.nextInt();
 										Doacao ong = new Doacao(salarioDoacao,porcentagem);
 										
 										if(b<=2) { 
 								    	switch (b) {
 										 case 1:
-											 System.out.println("\nMas antes de mostrar algumas das sugestões, esse mês você deseja doar para qual área: ");
-											 System.out.println("1- Assistência social;\r\n"+"2- Cultura;\r\n"+"3- Saúde;\r\n"+ "4- Meio ambiente");
+											 System.out.println("\nMas antes de mostrar algumas das sugestões, esse mês você deseja doar para "
+											 		+ "qual área? ");
+											 System.out.println("(1) Assistência social\n"+"(2) Cultura\n"+"(3) Saúde\n"+ "(4) Meio ambiente");
 											 c =read.nextInt();	 
 											 if(c<=4) { 
 											switch (c) {
 											 case 1:
-												 System.out.println("Assistência social:");
-												 System.out.println("1- CADI Brasil;\r\n"+ "2- Banco da providência - BP;\r\n"+"3- Amigos do bem - ADB.");
+												 System.out.println("\n=================== ASSISTÊNCIA SOCIAL ===================");
+												 System.out.println("(1) CADI Brasil\n(2) Banco da providência\n(3) Amigos do bem");
 												 d = read.nextInt();
 												 if(d<=3) {
 												 System.out.println("Sua doação foi depositada");
 												 ong.imprimir();
-												 System.out.println("Vamos para a próxima etapa!!");
+												 System.out.println("Vamos para a próxima etapa!! =D");
 												 }else {
-													 System.out.println("Escolha incorreta, tente novamente");
+													 System.out.println("OPÇÃO INVÁLIDA, tente novamente");
 												 }
 												 break;
 											 case 2:
-												 System.out.println("Cultura");
-												 System.out.println("1- GURI;\r\n"+ "2- Instituto Palmas;\r\n"+"3- Instituto da Cultura Afro no Brasil.");
+												 System.out.println("\n=================== CULTURA ===================");
+												 System.out.println("(1) GURI\n"+ "(2) Instituto Palmas\n"+"(3) Instituto da Cultura Afro no Brasil");
 												 d = read.nextInt();
 												 if(d<=3) {
 												 System.out.println("Sua doação foi depositada");
 												 ong.imprimir();
-												 System.out.println("Vamos para a próxima etapa!!");
+												 System.out.println("Vamos para a próxima etapa!! =D");
 												 }else {
-													 System.out.println("Escolha incorreta, tente novamente");
+													 System.out.println("OPÇÃO INVÁLIDA, tente novamente");
 												 }
 											     break;
 											 case 3:
-												 System.out.println("Saúde:");
-												 System.out.println("1- TUCCA;\r\n"+ "2- Horas de vida;\r\n"+"3- ACD.\r\n");
+												 System.out.println("\n=================== SAÚDE ===================");
+												 System.out.println("(1) TUCCA\n"+ "(2) Horas de vida\n"+"(3) ACD\n");
 												 d = read.nextInt();
 												 if(d<=3) {
 												 System.out.println("Sua doação foi depositada");
 												 ong.imprimir();
-												 System.out.println("Vamos para a próxima etapa!!");
+												 System.out.println("Vamos para a próxima etapa!! =D");
 												 }else {
-													 System.out.println("Escolha incorreta, tente novamente");
+													 System.out.println("OPÇÃO INVÁLIDA, tente novamente");
 												 }
 												 break;
 											 case 4:
-												 System.out.println("Meio Ambiente:");
-												 System.out.println("1- SOS Mata Atlântica;\r\n"+ "2- WWF Brasil;\r\n"+"3- IPÊ.");
+												 System.out.println("\n=================== MEIO AMBIENTE ===================");
+												 System.out.println("(1) SOS Mata Atlântica\n"+ "(2) WWF Brasil\n"+"(3) IPÊ");
 												 d = read.nextInt();
 												 if(d<=3) {
 												 System.out.println("Sua doação foi depositada");
 												 ong.imprimir();
-												 System.out.println("Vamos para a próxima etapa!!");
+												 System.out.println("Vamos para a próxima etapa!! =D");
 												 }else {
-													 System.out.println("Escolha incorreta, tente novamente");
+													 System.out.println("OPÇÃO INVÁLIDA, tente novamente");
 										         }break; 	         
 										}		 	
 											 }break;
 											 
 										 case 2: 
 											 System.out.println("\nTudo bem, desejo uma boa doação!!");
-											 System.out.println("Por Favor, informe o nome do Destinatário:");
+											 System.out.println("Por favor, informe o nome do destinatário:");
 											 destino = read.next(); 
 											 ong.imprimir();
 											 System.out.println("Sua doação foi depositada para "+ destino);
-											 System.out.println("Vamos para a próxima etapa!!");
+											 System.out.println("Vamos para a próxima etapa!! =D");
 											 break;
 									}
 								    	
 							    }else {
-								      System.out.println("Escolha incorreta, tente novamente");		
+								      System.out.println("OPÇÃO INVÁLIDA, tente novamente");		
 							    }break;
 								 
 								    case 2:{
 								    Doacao semong = new Doacao(salarioDoacao, porcentagem);
-								    System.out.println("Seu saldo atual é "+ salario); 
-								    System.out.println("Vamos para a próxima etapa!!");
+								    System.out.println("Seu saldo atual é "+ salarioDoacao); 
+								    System.out.println("Vamos para a próxima etapa!! =D");
 								    break;
 							 }   
 						  }
 								}else {
-									System.out.println("Por Favor, entre com o valor 1 ou 2");
+									System.out.println("Por favor, entre com a opção (1) ou (2)");
 								}
 								
-								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
-								System.out.println("Digite o numero: ");
+								System.out.println("\nDeseja continuar? \n(1) Sim \n(2) Não");
+								System.out.println("Digite a opção: ");
 								segundaOpcao = read.nextInt();
 								
 								break;	
 								
 							case 5:
-								System.out.println("\n======= Bem vindo a simulação de fundo de emergência  =========");
-								System.out.println("Digite o valor de suas despesas medias: ");
-								System.out.println("\nAqui é a onde vamos simular sua reserva de emergência, o que é isso?\n"+
-										"Caso um imprevisto aconteca, voce tem esse valor para garantir que suas contas fixas sejam pagas\n");
-										System.out.println("Como montar sua reserva. Para isso, temos 3 planos:\r\n"
-												+ "Pequeno - Para 3 meses;\r\n"
-												+ "Medio - Para 4 meses;\r\n"
-												+ "Grande - Para 6 meses;\n");
-										System.out.println("Para saber o seu saldo de emergência, digite o seu custo fixo mensal:");
+								System.out.println("\n=================== FUNDO DE EMERGÊNCIA ===================");
+								System.out.println("\nAqui é onde vamos simular sua reserva de emergência. Espera, mas o que é isso?\n"+
+										"Caso um imprevisto aconteça, você tem esse valor para garantir que suas contas fixas sejam pagas! Ufa!\n");
+										System.out.println("Como montar sua reserva? Temos 3 planos:\n"
+												+ "Curto >> 3 meses\n"
+												+ "Medio >> 4 meses\n"
+												+ "Longo >> 6 meses\n");
+										System.out.println("Para saber o seu saldo de emergência, digite o seu gasto fixo mensal:");
 										salario1 = read.nextDouble();
-										System.out.println("Escolha uma opção:\n"+"1-Plano Grande;\n"+"2- Plano Médio;\n"+"3 - Plano Pequeno;\n");
+										System.out.println("Escolha uma opção:\n"+"(1) Plano longo\n"+"(2) Plano médio\n"+"(3) Plano curto\n");
 										
 										op1 = read.nextInt();
 										
@@ -628,49 +655,54 @@ public class FinancasMain {
 										case 1:
 											
 										 CalcEmergencia1 teste1= new CalcEmergencia1(salario1); 
-												
+										System.out.println("\n-----------------------------------------------------");
 										teste1.imprimirInfo1();
+										System.out.println("\n-----------------------------------------------------");
 										break;
 										case 2:	
 											
 										CalcEmergencia2 teste2= new CalcEmergencia2(salario1); 
-										
+										System.out.println("\n-----------------------------------------------------");
 										teste2.imprimirInfo2();
+										System.out.println("\n-----------------------------------------------------");
 										break;
 										case 3:
 									    CalcEmergencia3 teste3= new CalcEmergencia3(salario1); 
-										
+									    System.out.println("\n-----------------------------------------------------");
 										teste3.imprimirInfo3();
+										System.out.println("\n-----------------------------------------------------");
 										break;
 										
 										}
 							
-								System.out.println("\n=============== Deseja continuar ============== \n1 - Sim \n2 - Não");
-								System.out.println("Digite o numero: ");
+								System.out.println("\nDeseja continuar? \n(1) Sim \n(2) Não");
+								System.out.println("Digite a opção: ");
 								segundaOpcao = read.nextInt();
 								break;	
 					
 														
 								default:
 									
-									System.out.println("\n======= Opção invalida =========");
-									System.out.println("\n======= Escolha a opção =========");
-									System.out.println("\n1 - Gastos fixos \n2 - Despesas de lazer \n3 - Investimento \n4 - Doação \n5 - Fundo de emergência \n0 - Sair");
-									System.out.println("Digite o numero: ");
+									System.out.println("\n======================= OPÇÃO INVÁLIDA ======================= ");
+									System.out.println("\n======================= MENU ======================= ");
+																		
+									System.out.println("\n(1) Gastos fixos \n(2) Despesas de lazer \n(3) Investimento \n(4) Doação \n(5) Fundo de emergência \n"
+											+ "(0) Sair");
+									System.out.println("Digite a opção: ");
 									opcao = read.nextInt();
 									
-									if(opcao < 0 || opcao > 6) {
-										System.out.println("\n======= Opção invalida =========");
-										
+									if(opcao < 0 || opcao > 6) 
+									{
+										System.out.println("\n======================= OPÇÃO INVÁLIDA ======================= ");	
 									}		
 		        		 }
 			       }
 			
-					if(segundaOpcao == 2) {
-								
+					if(segundaOpcao == 2) 
+					{	
 							opcao = 0;	
 					}
-				
 		}		
+		System.out.println("\nAté mais! Obrigade! =*");	
 	}
 }
